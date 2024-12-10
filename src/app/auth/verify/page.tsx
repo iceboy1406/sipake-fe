@@ -101,7 +101,7 @@ const VerifyPage = () => {
                                         <FormControl>
                                             <Input
                                                 placeholder="Masukan kode verifikasi anda"
-                                                type="password"
+                                                type="text"
                                                 {...field}
                                             />
                                         </FormControl>

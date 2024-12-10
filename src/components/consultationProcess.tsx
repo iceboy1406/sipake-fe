@@ -94,12 +94,23 @@ const ConsultationProcessComp: React.FC<Props> = ({ token }) => {
                             Selamat! Mesin BMW E36 Anda tidak mengalami masalah
                             power loss.
                         </CardTitle>
-                        <Button
-                            onClick={() => startConsultation()}
-                            className="mt-4"
-                        >
-                            Mulai Konsultasi Baru
-                        </Button>
+                        <div className="flex items-center gap-2">
+                            <Button
+                                onClick={() => startConsultation()}
+                                className="mt-4"
+                            >
+                                Mulai Konsultasi Baru
+                            </Button>
+                            <Button
+                                variant={"secondary"}
+                                onClick={() =>
+                                    router.push("/app/consultation/history")
+                                }
+                                className="mt-4"
+                            >
+                                Lihat Riwayat Konsultasi
+                            </Button>
+                        </div>
                     </>
                 ) : status == "ProblemNotFound" ? (
                     <>
@@ -107,12 +118,23 @@ const ConsultationProcessComp: React.FC<Props> = ({ token }) => {
                             Maaf! Sistem kami tidak dapat mengidentifikasi
                             masalah yang terjadi pada BMW E36 Anda.
                         </CardTitle>
-                        <Button
-                            onClick={() => startConsultation()}
-                            className="mt-4"
-                        >
-                            Mulai Konsultasi Baru
-                        </Button>
+                        <div className="flex items-center gap-2">
+                            <Button
+                                onClick={() => startConsultation()}
+                                className="mt-4"
+                            >
+                                Mulai Konsultasi Baru
+                            </Button>
+                            <Button
+                                variant={"secondary"}
+                                onClick={() =>
+                                    router.push("/app/consultation/history")
+                                }
+                                className="mt-4"
+                            >
+                                Lihat Riwayat Konsultasi
+                            </Button>
+                        </div>
                     </>
                 ) : status == "Result" ? (
                     <>
@@ -147,12 +169,25 @@ const ConsultationProcessComp: React.FC<Props> = ({ token }) => {
                                         __html: result.solution.name,
                                     }}
                                 />{" "}
-                                <Button
-                                    onClick={() => startConsultation()}
-                                    className="mt-4"
-                                >
-                                    Mulai Konsultasi Baru
-                                </Button>
+                                <div className="flex items-center gap-2">
+                                    <Button
+                                        onClick={() => startConsultation()}
+                                        className="mt-4"
+                                    >
+                                        Mulai Konsultasi Baru
+                                    </Button>
+                                    <Button
+                                        variant={"secondary"}
+                                        onClick={() =>
+                                            router.push(
+                                                "/app/consultation/history"
+                                            )
+                                        }
+                                        className="mt-4"
+                                    >
+                                        Lihat Riwayat Konsultasi
+                                    </Button>
+                                </div>
                             </>
                         )}
                     </>

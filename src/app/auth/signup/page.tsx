@@ -146,7 +146,7 @@ const RegisterPage = () => {
                 title: "Berhasil",
                 description: "Anda berhasil mendaftar",
             });
-            router.push("/auth/login");
+            router.push(`/auth/verify?username=${values.username}`);
         } catch (error) {
             if (isAxiosError(error)) {
                 toast({
